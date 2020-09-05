@@ -1,10 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
-import Test from './components/Test'
+//import './App.css';
+import Nav from './components/Nav'
+import Learn from './components/Learn'
+import Teach from './components/Teach'
+import Profile from './components/Profile'
 
 const INITIAL_STATE = {
-  message: "hi"
+  page: 'learn'
 }
 
 class App extends React.Component {
@@ -21,20 +24,15 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-    <Test message="lmao"/>
-    <Test message="klkl"/>
-    <Test message="kk"/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {this.state.message}
-        </p>
-        <h1
-        onClick={() => this.editMessage('lol')}
-        >
-          Learn React
-        </h1>
-      </header>
+      
+      {this.state.page === 'learn' && <Learn />}
+
+      {this.state.page === 'teach' && <Teach />}
+
+      {this.state.page === 'profile' && <Profile/>}
+
+
+      <Nav first={()=>this.setState({page: 'learn'})} second={()=>this.setState({page: 'teach'})} third={() => this.setState({page: 'profile'})}/>
     </div>
   );
 }
