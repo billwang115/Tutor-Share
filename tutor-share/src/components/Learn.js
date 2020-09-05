@@ -1,12 +1,17 @@
 import React from 'react';
 import LearnCard from './LearnCard'
+import ExposureIcon from '@material-ui/icons/Exposure';
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+import AppleIcon from '@material-ui/icons/Apple';
+import AudiotrackIcon from '@material-ui/icons/Audiotrack';
+
 
 const INITIAL_STATE = {
   cards: [{
     title: 'lol',
     desc:'sdlf',
     value: Math.floor(Math.random() * 5) + 1,
-    image:'https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-0/p480x480/118811259_353866809330635_3244566600374818727_n.png?_nc_cat=109&_nc_sid=b96e70&_nc_ohc=YLcMMY_n5OQAX_vxzqZ&_nc_ht=scontent.fybz2-2.fna&oh=cbc1acc871c555eaec29c09e1e733849&oe=5F7B0CB0',
+    src:'https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/118812307_369646424068062_3732024978468783710_n.jpg?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=xLXLh2-mQh8AX_0BmkT&_nc_ht=scontent.fybz2-2.fna&oh=18b7b94f68c5e244c2a1aed2dc5218ed&oe=5F77C78D',
 
   }]
 }
@@ -22,56 +27,79 @@ class Learn extends React.Component {
   return (
     <div>
 
-    {this.state.cards.map( (card, i) => (
       <LearnCard
-      key={i}
-      title={card.title}
-      desc={card.desc}
-      value={card.value}
-      image={card.image}
+      title="Steph"
+      desc="Hello i am stephen"
+      value="3"
+      icon=<AppleIcon />
+      label="iOS development"
+      src="https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/118812307_369646424068062_3732024978468783710_n.jpg?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=xLXLh2-mQh8AX_0BmkT&_nc_ht=scontent.fybz2-2.fna&oh=18b7b94f68c5e244c2a1aed2dc5218ed&oe=5F77C78D"
       />
-    ))}
+
+      <br></br>
 
       <LearnCard
-      title="vape"
-      desc="slat1"
+      title="Bluewan"
+      desc="Hello I am bluewan"
       value="5"
-      image="https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-0/p480x480/118811259_353866809330635_3244566600374818727_n.png?_nc_cat=109&_nc_sid=b96e70&_nc_ohc=YLcMMY_n5OQAX_vxzqZ&_nc_ht=scontent.fybz2-2.fna&oh=cbc1acc871c555eaec29c09e1e733849&oe=5F7B0CB0"
+      icon=<AccountBalanceIcon />
+      label="Finance"
+      src="https://scontent.fybz2-1.fna.fbcdn.net/v/t1.15752-9/p1080x2048/118770349_785394025601999_7737507424071339358_n.png?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=kZzn6WgEflQAX97A0IS&_nc_ht=scontent.fybz2-1.fna&oh=e54b016c57c49f8c806a198c99b8d307&oe=5F79EAAD"
       />
 
+      <br></br>
+
       <LearnCard
-      title="shorty1"
-      desc="slat1"
+      title="Arman"
+      desc="Hello I am arman"
       value="3"
-      image="https://scontent.fybz2-1.fna.fbcdn.net/v/t1.15752-9/p1080x2048/118617547_342967976856185_4431030853107818721_n.png?_nc_cat=103&_nc_sid=b96e70&_nc_ohc=UUNZLVKe2GcAX-kPSSl&_nc_ht=scontent.fybz2-1.fna&oh=5a2559c18a8287d16e57a60021c2889f&oe=5F7B0D61"
+      icon=<AppleIcon />
+      label="iOS development"
+      src="https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/118787909_352238676153162_3918645035166570359_n.jpg?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=N-2BFmFVwoIAX8dcqHb&_nc_ht=scontent.fybz2-2.fna&oh=a310abecf1ad2543c7c8f660cee34e76&oe=5F77CEA7"
       />
 
+      <br></br>
+
       <LearnCard
-      title="shorty2"
-      desc="slat1"
+      title="Billiam"
+      desc="Hello i am bill"
       value="3"
-      image="https://scontent.fybz2-1.fna.fbcdn.net/v/t1.15752-9/p1080x2048/118472177_651373572167684_7920873609989401110_n.png?_nc_cat=100&_nc_sid=b96e70&_nc_ohc=1tHlBqtXa04AX9VCCDh&_nc_ht=scontent.fybz2-1.fna&oh=8baade727f47cf9ce323ac08ede64538&oe=5F79F7E8"
+      icon=<ExposureIcon />
+      label="Calculus"
+      src="https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/71172851_380300449317203_5567050052599283712_n.png?_nc_cat=111&_nc_sid=b96e70&_nc_ohc=4QR4D4AVP4wAX8TTP21&_nc_ht=scontent.fybz2-2.fna&oh=e17ce6457b3d8f53cfa94b9bf7cdaa7b&oe=5F78A3C4"
       />
 
+      <br></br>
+
       <LearnCard
-      title="shorty3"
-      desc="slat1"
+      title="Alvin"
+      desc="Hello i am alvin"
       value="4"
-      image="https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/s1080x2048/118573616_441076833519204_7684037619959936410_n.jpg?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=_5yDsaWFAhMAX9_LJXx&_nc_ht=scontent.fybz2-2.fna&tp=7&oh=4bfedaeea4939b5eb1beb4c6a877c764&oe=5F7AA9AC"
+      icon=<AudiotrackIcon />
+      label="Music"
+      src="https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/118708569_619048398779591_6458803775948465152_n.jpg?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=9-_KDUXJMrMAX_QETp9&_nc_ht=scontent.fybz2-2.fna&oh=a0f6a05d451c85d7f010067f8d365937&oe=5F79F6E2"
       />
 
+      <br></br>
+
       <LearnCard
-      title="shorty4"
-      desc="slat1"
+      title="Kavin"
+      desc="Hello i am kavin"
       value="5"
-      image="https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/p1080x2048/118478942_3498958633501173_5534057496052564007_n.png?_nc_cat=104&_nc_sid=b96e70&_nc_ohc=BEvXr1JxK1IAX9sq1_8&_nc_ht=scontent.fybz2-2.fna&oh=807a20ed4b0eb2828908a6da7196671a&oe=5F7987B2"
+      icon=<ExposureIcon />
+      label="Calculus"
+      src="https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/118768266_688321465376534_7407808357516412197_n.jpg?_nc_cat=109&_nc_sid=b96e70&_nc_ohc=_5ZWogUNsQIAX_lxg3x&_nc_ht=scontent.fybz2-2.fna&oh=7051c25d7188ca1b55f1cd4b1f140a29&oe=5F79C8EA"
       />
 
+      <br></br>
+
       <LearnCard
-      title="shorty5"
-      desc="slat1"
+      title="Do-oh"
+      desc="Hello i am dooh"
       value="1"
-      image="https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/p1080x2048/118488386_913144369209234_5035819811819500375_n.jpg?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=xIFOEBcIF3sAX8cmrPp&_nc_ht=scontent.fybz2-2.fna&tp=6&oh=7b0e10685be1c0cd00d03791d85765ad&oe=5F78CB53"
+      icon=<AppleIcon />
+      label="iOS development"
+      src="https://scontent.fybz2-1.fna.fbcdn.net/v/t1.15752-9/118812887_616991835674522_7887071315083101109_n.png?_nc_cat=110&_nc_sid=b96e70&_nc_ohc=btkQvsqGF3MAX9eSWs-&_nc_ht=scontent.fybz2-1.fna&oh=118308bd20eee12aef02deee98375b1f&oe=5F783760"
       />
 
     </div>
