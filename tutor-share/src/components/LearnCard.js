@@ -9,10 +9,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
-import ExposureIcon from '@material-ui/icons/Exposure';
-import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
-import AppleIcon from '@material-ui/icons/Apple';
-import AudiotrackIcon from '@material-ui/icons/Audiotrack';
 import Avatar from '@material-ui/core/Avatar';
 
 const INITIAL_STATE = {
@@ -38,17 +34,20 @@ const LearnCard = (props) => {
     <Card className={classes.root}>
       <CardActionArea>
         <CardContent>
-          <Avatar src={props.src} />
+        <div style={{display:"flex"}}>
+          <Avatar src={props.src} style={{marginRight: 15, width: 50, height: 50}} />
           <Typography gutterBottom variant="h5" component="h2">
             {props.title}
           </Typography>
+          </div>
           <Rating name="read-only" value={props.value} readOnly />
           <br></br><br></br>
           <Typography variant="body2" color="white" component="p">
             {props.desc}
           </Typography>
           <br></br>
-          <Chip icon={props.icon} label={props.label}  />
+          <Chip icon={props.icon} label={props.label} size="large" />
+          <Chip icon={props.icon2} label={props.label2} size="large" />
 
         </CardContent>
 
