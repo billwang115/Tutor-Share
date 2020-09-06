@@ -39,7 +39,7 @@ export default function TeachSearchBar() {
     <Paper component="form" className={classes.root}>
       <InputBase
         className={classes.input}
-        placeholder="Search skills"
+        placeholder="Search students"
         inputProps={{ 'aria-label': 'search students' }}
       />
       <IconButton type="submit" className={classes.iconButton} aria-label="search">
