@@ -42,6 +42,7 @@ const ProfileCard = (props) => {
           <Typography gutterBottom variant="h5" value="slatt" component="h2"> {props.title} </Typography>
           </div>
           <br></br><br></br>
+          <h3>Your bio</h3>
           <TextField value={desc} style={{marginBottom: 10}} onChange={(e)=>setDesc(e.target.value)}> </TextField>
 
           <br></br>
