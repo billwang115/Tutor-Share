@@ -48,9 +48,9 @@ const INITIAL_STATE = {
       title: 'Billiam',
       desc: "I'm a highschool student that excels in Calculus and Comp Tech classes",
       value: Math.floor(Math.random() * 5) + 1,
-      icon:{ExposureIcon},
+      icon:<ExposureIcon/>,
       label:"Calculus",
-      icon2:{RouterIcon},
+      icon2:<RouterIcon/>,
       label2:"Computer tech",
       src:"https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/71172851_380300449317203_5567050052599283712_n.png?_nc_cat=111&_nc_sid=b96e70&_nc_ohc=4QR4D4AVP4wAX8TTP21&_nc_ht=scontent.fybz2-2.fna&oh=e17ce6457b3d8f53cfa94b9bf7cdaa7b&oe=5F78A3C4"
     },
