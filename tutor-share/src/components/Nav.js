@@ -5,7 +5,6 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import LearnIcon from '@material-ui/icons/LocalLibrary';
 import TeachIcon from '@material-ui/icons/WbIncandescent';
 import ProfileIcon from '@material-ui/icons/AccountCircle';
-import { blue } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
     root: {
