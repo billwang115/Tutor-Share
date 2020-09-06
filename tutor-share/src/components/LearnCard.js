@@ -62,7 +62,6 @@ const LearnCard = (props) => {
         </Button>
       </CardActions>
     </Card>
-
   )
 }
 

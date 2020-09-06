@@ -9,6 +9,8 @@ import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 import PhotoFilterIcon from '@material-ui/icons/PhotoFilter';
 import AdbIcon from '@material-ui/icons/Adb';
 import CodeIcon from '@material-ui/icons/Code';
+import LearnSearchBar from './LearnSearchBar'
+import Typography from '@material-ui/core/Typography';
 
 const INITIAL_STATE = {
   cards: [{
@@ -29,8 +31,16 @@ class Learn extends React.Component {
 
   render() {
   return (
-    <div style={{marginBottom: 80, marginTop: 50}}>
-
+        <>
+        <LearnSearchBar/>
+    <div style={{ width:'100%', position: 'fixed', height: '100%' , top:'100px', padding: '0px', overflow: 'scroll', marginBottom:80}}>
+    <div style={{width:'100%', margin: 'auto',  marginBottom:150, overflow: 'auto'}}>
+        <div style={{ overflow:'hidden'}}>
+            <div style={{textAlign:'center', fontFamily:"Raleway"}}>
+                <Typography variant="h5">Recommended Tutors</Typography>
+            </div>
+        </div>
+        <br/>
       <LearnCard
       title="Steph"
       desc="Passionate computer science student, I love programming in iOS"
@@ -121,6 +131,8 @@ class Learn extends React.Component {
       />
 
     </div>
+    </div>
+    </>
   );
 }
 }
