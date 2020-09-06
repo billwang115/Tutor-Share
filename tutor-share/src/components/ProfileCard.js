@@ -40,6 +40,9 @@ const ProfileCard = (props) => {
         <div style={{display:"flex"}}>
           <Avatar src={props.src} style={{marginRight: 25, width: 50, height: 50}} />
           <Typography gutterBottom variant="h5" component="h2"> {props.title} </Typography>
+          <Button style={{marginLeft:80, borderRadius: 25}} variant="contained" color="primary">
+  2 HOURS
+</Button>
           </div>
           <br></br><br></br>
           <h3>My tutor bio</h3>

@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function LearnSearchBar() {
+export default function LearnSearchBar(props) {
   const classes = useStyles();
 
   return (
@@ -41,6 +41,7 @@ export default function LearnSearchBar() {
         className={classes.input}
         placeholder="Search skills"
         inputProps={{ 'aria-label': 'search students' }}
+        onChange={(e)=>props.searchChange(e.target.value)}
       />
       <IconButton type="submit" className={classes.iconButton} aria-label="search">
         <SearchIcon />

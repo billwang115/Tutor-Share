@@ -75,20 +75,26 @@ const INITIAL_STATE = {
       src:"https://scontent.fybz2-1.fna.fbcdn.net/v/t1.15752-9/118812887_616991835674522_7887071315083101109_n.png?_nc_cat=110&_nc_sid=b96e70&_nc_ohc=btkQvsqGF3MAX9eSWs-&_nc_ht=scontent.fybz2-1.fna&oh=118308bd20eee12aef02deee98375b1f&oe=5F783760"
     },
 
-  ]
+  ],
+
+  searchTerm: '',
 }
 
 class Learn extends React.Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = INITIAL_STATE;
+  }
+
+  searchChange(term) {
+    this.setState({searchTerm: term})
   }
 
   render() {
   return (
         <>
-        <LearnSearchBar/>
+        <LearnSearchBar searchChange={(e)=>this.searchChange(e)}/>
     <div style={{ width:'100%', position: 'fixed', height: '100%' , top:'100px', padding: '0px', overflow: 'scroll', marginBottom:80}}>
     <div style={{width:'100%', margin: 'auto',  marginBottom:150, overflow: 'auto'}}>
         <div style={{ overflow:'hidden'}}>
@@ -98,7 +104,7 @@ class Learn extends React.Component {
         </div>
         <br/>
 
-        {this.state.cards.map( (card, i) =>
+        {this.state.cards.filter(card => this.state.searchTerm === '' || card.label.toLowerCase().includes(this.state.searchTerm.toLowerCase()) || card.label2.toLowerCase().includes(this.state.searchTerm.toLowerCase())).map( (card, i) =>
           <>
           <LearnCard
           title={card.title}
