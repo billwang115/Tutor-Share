@@ -22,7 +22,7 @@ class Profile extends React.Component {
 
       <ProfileCard
         title="Victor"
-        desc="Slat"
+        desc="Computer science student passionate about teaching."
         icon=<AppleIcon />
         label="iOS development"
         icon2=<YouTubeIcon />
@@ -31,9 +31,11 @@ class Profile extends React.Component {
         label3="Web Development"
         src="https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/118812307_369646424068062_3732024978468783710_n.jpg?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=xLXLh2-mQh8AX_0BmkT&_nc_ht=scontent.fybz2-2.fna&oh=18b7b94f68c5e244c2a1aed2dc5218ed&oe=5F77C78D"
       />
-      <br></br>
 
+<div style={{marginLeft: '5%', width:'90%', overflow: 'hidden'}}>
+      <h2> My lessons </h2>
       <Lessons/>
+      </div>
 
     </div>
   );
