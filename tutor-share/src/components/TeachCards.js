@@ -6,6 +6,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
+import Avatar from '@material-ui/core/Avatar';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
   root: {
@@ -32,12 +34,18 @@ const SimpleCard = (props) => {
   return (
     <Card className={classes.root}>
       <CardContent>
-        <Typography variant="h5" component="h2">
-          {props.name}
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          {props.title}
-        </Typography>
+        <div style={{display:"flex"}}>
+            <Avatar src={props.src} style={{marginRight: 15, width: 50, height: 50}} />
+            <Grid container justify="space-between">
+                <Typography variant="h5" component="h2">
+                    {props.name}
+                </Typography>
+                <Typography className={classes.pos} color="textSecondary">
+                    {props.title}
+                </Typography>
+            </Grid>
+        </div>
+        <br/>
         <Typography variant="body2" component="p">
             <Chip icon={props.icon} label={props.label} style={{width: 200, height: 45}}/>
         </Typography>
