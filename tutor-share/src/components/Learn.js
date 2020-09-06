@@ -29,11 +29,11 @@ class Learn extends React.Component {
 
   render() {
   return (
-    <div>
+    <div style={{marginBottom: 80, marginTop: 50}}>
 
       <LearnCard
       title="Steph"
-      desc="Passionate computer sciencestudents"
+      desc="Passionate computer science student, I love programming in iOS"
       value="3"
       icon=<AppleIcon />
       label="iOS development"

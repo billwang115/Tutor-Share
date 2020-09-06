@@ -1,5 +1,6 @@
 import React from 'react';
 import Rating from '@material-ui/lab/Rating';
+import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -36,18 +37,18 @@ const LearnCard = (props) => {
         <CardContent>
         <div style={{display:"flex"}}>
           <Avatar src={props.src} style={{marginRight: 15, width: 50, height: 50}} />
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.title}
-          </Typography>
+          <Grid container justify="space-between">
+            <Typography gutterBottom variant="h5" component="h2"> {props.title} </Typography>
+            <Rating name="read-only" value={props.value} readOnly />
+          </Grid>
           </div>
-          <Rating name="read-only" value={props.value} readOnly />
           <br></br><br></br>
-          <Typography variant="body2" color="white" component="p">
-            {props.desc}
-          </Typography>
+          <Typography variant="body2" color="white" component="p"> {props.desc} </Typography>
           <br></br>
-          <Chip icon={props.icon} label={props.label} size="large" />
-          <Chip icon={props.icon2} label={props.label2} size="large" />
+          <div style={{display:"flex"}}>
+            <Chip icon={props.icon} label={props.label} style={{marginRight: 5, width: 200, height: 35}}/>
+            <Chip icon={props.icon2} label={props.label2}  style={{width: 200, height: 35}}/>
+          </div>
 
         </CardContent>
 
