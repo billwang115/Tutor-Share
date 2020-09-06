@@ -37,16 +37,13 @@ export default function FullwidthGrid() {
       alignItems="stretch"
       >
         <Grid item xs={12}>
-          <TeachCards name="Victor" title="Grade 8" icon= <AppleIcon/> label="IOS Development" size ="large"/>
+          <TeachCards name="Victor" title="Grade 8" icon= <AppleIcon/> label="IOS Development" time="03/14  at  3:00pm"/>
         </Grid>
         <Grid item xs={12}>
-          <TeachCards name="Josh" title="University" icon= <YouTubeIcon/> label="Video Editing" size="large"/>
+          <TeachCards name="Josh" title="University" icon= <YouTubeIcon/> label="Video Editing" time="08/28  at  2:00pm"/>
         </Grid>
         <Grid item xs={12}>
-          <TeachCards name="Eric" title="Grade 12" icon= <WebIcon/> label="Web Development" size="large"/>
-        </Grid>
-        <Grid item xs={12}>
-          <TeachCards name="Eric" title="Grade 12" icon= <WebIcon/> label="Web Development" size="large"/>
+          <TeachCards name="Eric" title="Grade 12" icon= <WebIcon/> label="Web Development" time="09/04  at  12:00pm"/>
         </Grid>
       </Grid>
     </div>

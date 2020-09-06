@@ -39,12 +39,16 @@ const SimpleCard = (props) => {
           {props.title}
         </Typography>
         <Typography variant="body2" component="p">
-            <Chip icon={props.icon} label={props.label} />
+            <Chip icon={props.icon} label={props.label} style={{width: 200, height: 45}}/>
+        </Typography>
+        <br/>
+        <Typography variant="subtitle1">
+            {props.time}
         </Typography>
       </CardContent>
       <CardActions>
         <Button size="small">Contact</Button>
-        <Button size="small">View Schedule</Button>
+        <Button size="small">Change Time</Button>
       </CardActions>
     </Card>
   );
