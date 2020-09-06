@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TeachSearchBar() {
+export default function LearnSearchBar() {
   const classes = useStyles();
 
   return (
